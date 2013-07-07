@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 var titleText = fs.readFile('index.html');
 
 app.get('/', function(request, response) {
-  response.send(titleText);
+  response.send('Hi World');
 });
 
 var port = process.env.PORT || 5000;
