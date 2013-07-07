@@ -1,8 +1,8 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-var titleText = fs.readFile('index.html');
-titleText = 'Howdy world';
+var titleBuffer = fs.readFile('index.html');
+titleText = titleBuffer.toString();
 app.get('/', function(request, response) {
   response.send(titleText);
 });
