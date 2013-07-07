@@ -2,9 +2,9 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 var titleText = fs.readFile('index.html');
-
+titleText = 'Howdy world';
 app.get('/', function(request, response) {
-  response.send('Hi World');
+  response.send(titleText);
 });
 
 console.log(titleText);
