@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 var titleBuffer = fs.readFile('index.html');
-titleText = titleBuffer.toString();
+var titleText = titleBuffer.toString();
 app.get('/', function(request, response) {
   response.send(titleText);
 });
